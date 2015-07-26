@@ -1,5 +1,7 @@
 Call Notifier
 =============
+Nawras GEORGI 2015
+License GPL v3
 
 Call Notifier is a free app that will execute a HTTP GET or POST request when receiving a phone call or a text message. You can program your XBMC, your home automation system or any other system to show a message or launch an action.
 
