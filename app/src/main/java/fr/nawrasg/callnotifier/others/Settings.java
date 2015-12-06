@@ -15,11 +15,6 @@ public class Settings {
 		return nPref.getString("url", "");
 	}
 	
-//	public static int getPort(Context context){
-//		SharedPreferences nPref = PreferenceManager.getDefaultSharedPreferences(context);
-//		return nPref.getInt("port", 80);
-//	}
-	
 	public static boolean ifCall(){
 		SharedPreferences nPref = PreferenceManager.getDefaultSharedPreferences(App.getContext());
 		return nPref.getBoolean("call", false);
