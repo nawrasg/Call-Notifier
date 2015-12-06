@@ -29,6 +29,11 @@ public class Settings {
 		SharedPreferences nPref = PreferenceManager.getDefaultSharedPreferences(App.getContext());
 		return nPref.getString("http", "GET");
 	}
+
+	public static boolean isAtlantis(){
+		SharedPreferences nPref = PreferenceManager.getDefaultSharedPreferences(App.getContext());
+		return nPref.getBoolean("atlantis", false);
+	}
 	
 	public static String getName(String number){
 		String contactName = "";
