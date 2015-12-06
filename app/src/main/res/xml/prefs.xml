@@ -10,8 +10,8 @@
             android:title="@string/pref_server_title"/>
 
         <CheckBoxPreference
-            android:icon="@drawable/ic_action_call"
-            android:key="call"
+            android:icon="@drawable/ng_atlantis"
+            android:key="atlantis"
             android:summary="@string/pref_atlantis_summary"
             android:title="@string/pref_atlantis_title"/>
         <ListPreference
