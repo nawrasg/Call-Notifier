@@ -27,14 +27,10 @@
         <CheckBoxPreference
             android:icon="@drawable/ic_action_call"
             android:key="call"
-            android:summaryOff="@string/pref_call_summary_off"
-            android:summaryOn="@string/pref_call_summary_on"
             android:title="@string/pref_call_title"/>
         <CheckBoxPreference
             android:icon="@drawable/ic_action_email"
             android:key="sms"
-            android:summaryOff="@string/pref_sms_summary_off"
-            android:summaryOn="@string/pref_sms_summary_on"
             android:title="@string/pref_sms_title"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_other">
