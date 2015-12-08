@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.telephony.SmsMessage;
 
+import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -67,11 +68,19 @@ public class SMSService extends IntentService {
 								.post(nBody.build())
 								.build();
 					}
-					Response response = client.newCall(request).execute();
+					client.newCall(request).enqueue(new Callback() {
+						@Override
+						public void onFailure(Request request, IOException throwable) {
+							throwable.printStackTrace();
+						}
+
+						@Override
+						public void onResponse(Response response) throws IOException {
+							if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+						}
+					});
 
 				} catch (UnsupportedEncodingException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
